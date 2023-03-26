@@ -2,14 +2,25 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def TestFun(request):
-    return HttpResponse('Hello,Testing....')
+
 
 def AboutFun(request):
-    return HttpResponse('<h1>About Page</h1>')
+    return render(request,'about.html')
 
-def indexFun(request):
-    return render(request,'index.html')
+def productFun(request):
+    return render(request,'product.html')
 
 def homeFun(request):
     return render(request,'home.html')
+    
+def contactFun(request):
+    return render(request,'contact.html')
+
+def productdetailsFun(request):
+    return render(request,'productdetails.html')
+
+def cartFun(request):
+    return render(request,'cart.html')
+
+def accountFun(request):
+    return render(request,'account.html')
